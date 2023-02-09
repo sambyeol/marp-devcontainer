@@ -9,7 +9,7 @@ fi
 
 # create non-root user
 if ! [ "${USERNAME}" = "root" ]; then
-    adduser -s $(which zsh) -g wheel -D ${USERNAME}
+    adduser -s $(which zsh) -G wheel -D ${USERNAME}
     echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/wheel
     su ${USERNAME} -s /bin/ash -c "touch /home/${USERNAME}/.sudo_as_admin_successful"
 fi
