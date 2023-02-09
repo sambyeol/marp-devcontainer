@@ -4,7 +4,12 @@ USER root
 
 RUN apk add \
         ca-certificates \
+        chromium \
         curl \
+        font-noto-cjk \
+        font-noto-devanagari \
+        font-noto-arabic \
+        font-noto-bengali \
         git \
         gpg \
         npm \
@@ -23,3 +28,5 @@ RUN /tmp/script-library/alpine-create-user.sh ${USERNAME} \
     && rm -rf /tmp/script-library
 
 USER ${USERNAME}
+ENV CHROME_PATH /usr/bin/chromium-browser
+

@@ -1,5 +1,4 @@
-ARG OS=debian
-FROM ${OS}:latest
+FROM debian:latest
 
 USER root
 
@@ -7,7 +6,11 @@ RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
+        chromium \
         curl \
+        fonts-noto-cjk \
+        fonts-noto-cjk-extra \
+        fonts-noto-color-emoji \
         git \
         gpg \
         ssh-client \
@@ -29,3 +32,5 @@ RUN /tmp/script-library/debian-create-user.sh ${USERNAME} \
     && rm -rf /tmp/script-library
 
 USER ${USERNAME}
+ENV CHROME_PATH=/usr/bin/chromium
+
