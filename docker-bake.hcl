@@ -2,7 +2,6 @@ group "default" {
     targets = [
         "2_3_0_alpine",
         "2_3_0_debian",
-        "2_3_0_ubuntu",
     ]
 }
 
@@ -15,13 +14,6 @@ target "cross_platform" {
 
 target "debian" {
     dockerfile = "./dockerfiles/debian.dockerfile"
-}
-
-target "ubuntu" {
-    dockerfile = "./dockerfiles/debian.dockerfile"
-    args = {
-        OS = "ubuntu"
-    }
 }
 
 target "alpine" {
@@ -48,16 +40,6 @@ target "2_3_0_alpine" {
         "sambyeol/marp-devcontainer:2.3",
         "sambyeol/marp-devcontainer:2",
         "sambyeol/marp-devcontainer:latest",
-    ]
-}
-
-target "2_3_0_ubuntu" {
-    inherits = ["2_3_0", "ubuntu", "cross_platform"]
-    tags = [
-        "sambyeol/marp-devcontainer:2.3.0-ubuntu",
-        "sambyeol/marp-devcontainer:2.3-ubuntu",
-        "sambyeol/marp-devcontainer:2-ubuntu",
-        "sambyeol/marp-devcontainer:ubuntu",
     ]
 }
 
