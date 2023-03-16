@@ -22,20 +22,20 @@ target "alpine" {
 
 target "version" {
     args = {
-        MARP_VERSION = "2.3.0"
+        MARP_VERSION = "2.4.0"
     }
 }
 
 target "alpine" {
     inherits = ["version", "alpine", "cross_platform"]
     tags = [
-        "ghcr.io/sambyeol/marp-devcontainer:2.3.0-alpine",
-        "ghcr.io/sambyeol/marp-devcontainer:2.3-alpine",
+        "ghcr.io/sambyeol/marp-devcontainer:2.4.0-alpine",
+        "ghcr.io/sambyeol/marp-devcontainer:2.4-alpine",
         "ghcr.io/sambyeol/marp-devcontainer:2-alpine",
         "ghcr.io/sambyeol/marp-devcontainer:alpine",
 
-        "ghcr.io/sambyeol/marp-devcontainer:2.3.0",
-        "ghcr.io/sambyeol/marp-devcontainer:2.3",
+        "ghcr.io/sambyeol/marp-devcontainer:2.4.0",
+        "ghcr.io/sambyeol/marp-devcontainer:2.4",
         "ghcr.io/sambyeol/marp-devcontainer:2",
         "ghcr.io/sambyeol/marp-devcontainer:latest",
     ]
@@ -44,8 +44,8 @@ target "alpine" {
 target "debian" {
     inherits = ["version", "debian", "cross_platform"]
     tags = [
-        "ghcr.io/sambyeol/marp-devcontainer:2.3.0-debian",
-        "ghcr.io/sambyeol/marp-devcontainer:2.3-debian",
+        "ghcr.io/sambyeol/marp-devcontainer:2.4.0-debian",
+        "ghcr.io/sambyeol/marp-devcontainer:2.4-debian",
         "ghcr.io/sambyeol/marp-devcontainer:2-debian",
         "ghcr.io/sambyeol/marp-devcontainer:debian",
     ]
