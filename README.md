@@ -1,6 +1,6 @@
 # Devcontainer with Marp
 Pre-installed [Marp](https://marp.app) for [devcontainer](https://code.visualstudio.com/docs/remote/containers).
-You can find the images in [Docker Hub](https://hub.docker.com/r/sambyeol/marp-devcontainer).
+You can find the images in `ghcr.io/sambyeol/marp-devcontainer`.
 
 ## Quickstart
 Make a devcontainer setting file at `.devcontainer/devcontainer.json` in your project.
@@ -17,6 +17,14 @@ Make a devcontainer setting file at `.devcontainer/devcontainer.json` in your pr
 }
 ```
 Then, reopen in container.
+
+## Tags
+Tags are named by `<version>-<distribution>`.
+* Images are tagged with its `marp-cli` version. For example, `latest` tags mean that the image is created with the latest version of `marp-cli`.
+* There are various base OS distributions. available distributions are as follows:
+  * `alpine`: latest Alpine (default)
+  * `debian`: latest Debian
+  * `ubuntu`: latest Ubuntu LTS
 
 ## Cross-compile Images
 All images are cross-compiled with `docker-buildx`.

@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+LABEL org.opencontainers.image.source=https://github.com/sambyeol/marp-devcontainer
+
 USER root
 
 RUN apk add \

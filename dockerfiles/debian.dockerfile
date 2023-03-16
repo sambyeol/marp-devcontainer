@@ -1,5 +1,7 @@
 FROM debian:latest
 
+LABEL org.opencontainers.image.source=https://github.com/sambyeol/marp-devcontainer
+
 USER root
 
 RUN apt-get update \
