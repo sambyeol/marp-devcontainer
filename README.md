@@ -6,7 +6,7 @@ You can find the images in `ghcr.io/sambyeol/marp-devcontainer`.
 Make a devcontainer setting file at `.devcontainer/devcontainer.json` in your project.
 ```json
 {
-    "image": "sambyeol/marp-devcontainer",
+    "image": "ghcr.io/sambyeol/marp-devcontainer",
     "customizations": {
         "vscode": {
             "extensions": [
