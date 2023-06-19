@@ -24,7 +24,6 @@ Tags are named by `<version>-<distribution>`.
 * There are various base OS distributions. available distributions are as follows:
   * `alpine`: latest Alpine (default)
   * `debian`: latest Debian
-  * `ubuntu`: latest Ubuntu LTS
 
 ## Cross-compile Images
 All images are cross-compiled with `docker-buildx`.
